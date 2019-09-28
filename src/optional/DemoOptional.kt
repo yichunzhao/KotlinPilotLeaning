@@ -3,7 +3,6 @@ package optional
 fun addTwoNumbers(num1: Double, num2: Double) = num1 + num2
 
 fun methodTakeLambada(str: String, action: (String) -> Int) {
-
     println(action(str))
 }
 
@@ -20,7 +19,6 @@ fun findUserBy(id: Long): User? {
     }
     return user
 }
-
 
 fun main() {
 
