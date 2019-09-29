@@ -34,7 +34,6 @@ fun main() {
     val c = 5.6
 
     val scaleneContext: TriangleIdentifierContext = TriangleIdentifierContext(Scalene())
-    //string template:  $i or ${x.do()}  $:evaluate a variable or an expression.
     println("the type is scalene ${scaleneContext.typeOf(a, b, c)}")
 
     val isoscelesContext: TriangleIdentifierContext = TriangleIdentifierContext(Isosceles())
