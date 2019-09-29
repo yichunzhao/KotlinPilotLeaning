@@ -4,11 +4,12 @@ import java.util.*
 
 data class Customer(val id: UUID, val name: String, var address: String, var phoneNum: String) {
     constructor(id: UUID, name: String) : this(id, name, "", "")
+
 }
 
 fun main() {
-    val customer = Customer(id=UUID.randomUUID(),name="mia")
-    val customer1 = Customer(UUID.randomUUID(),name = "Jen")
+    val customer = Customer(id = UUID.randomUUID(), name = "mia")
+    val customer1 = Customer(UUID.randomUUID(), name = "Jen")
     customer.address = "oki address"
     customer.phoneNum = "12345678910"
 
@@ -17,5 +18,4 @@ fun main() {
 
     println(customer.toString())
     println(customer1.toString())
-
 }
