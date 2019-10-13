@@ -2,9 +2,9 @@ package classes
 
 import java.util.*
 
+//primary constructor
 data class Customer(val id: UUID, val name: String, var address: String, var phoneNum: String) {
-    constructor(id: UUID, name: String) : this(id, name, "", "")
-
+    constructor(id: UUID, name: String) : this(id, name, "", "") //secondary constructor
 }
 
 fun main() {

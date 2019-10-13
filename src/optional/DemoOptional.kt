@@ -25,7 +25,7 @@ fun main() {
     var name: String? = null    //it is a nullable variable
     println("my name is ${name?.toUpperCase()}") //string template
 
-    //fun invocation {}
+    //fun invocation {} in the string template
     println("sum = ${addTwoNumbers(1.2, 3.4)}")
 
     //fun take lambada as an argument parameter    functional interface
