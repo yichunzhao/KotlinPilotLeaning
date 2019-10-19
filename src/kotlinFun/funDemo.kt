@@ -20,7 +20,8 @@ fun main(args: Array<String>) {
     printAString(name!!.toUpperCase())
 }
 
-//kotlin may ignore void(unit)
+//kotlin may ignore void(unit); kotlin return unit, meaning return void in java; the Unit is an object.
+//it avoid to cause the null pointer exception.
 fun printAString(value: String?) {
     println(value)
 }
