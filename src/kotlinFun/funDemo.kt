@@ -18,6 +18,8 @@ fun main(args: Array<String>) {
 
     //nonnull assertion, it throws KotlinNullPointerException
     printAString(name!!.toUpperCase())
+
+
 }
 
 //kotlin may ignore void(unit); kotlin return unit, meaning return void in java; the Unit is an object.
