@@ -1,6 +1,5 @@
 package kotlinFun
 
-
 //single expression function, can have single only statement
 fun addTwoNumber(num1: Double, num2: Double): Double = num1 + num2
 
@@ -10,4 +9,7 @@ fun main() {
     //Double has a default toString method, just the same as the java.
     val sum = addTwoNumber(123.343, 33.223)
     println(sum)
+
+    //parameter equals can change the parameter order
+    println(addTwoNumber(num2 = 23.0, num1 = 12.0))
 }
