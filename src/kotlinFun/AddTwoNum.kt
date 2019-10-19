@@ -11,9 +11,11 @@ fun main() {
     val sum = addTwoNumber(123.343, 33.223)
     println(sum)
 
+    //using name parameter:
     //parameter equals can change the parameter order
     println(addTwoNumber(num2 = 23.0, num1 = 12.0))
 
+    //using optional parameter:
     //providing num1 alone
     println(addTwoNumber(num1 = 23.0))
 }
