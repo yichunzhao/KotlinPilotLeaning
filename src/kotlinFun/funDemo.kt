@@ -5,11 +5,19 @@ fun main(args: Array<String>) {
     //by default, in kotlin variable is un-nullable
     //val name = "my name"
     //nullable variable must be defined explicitly.
-    val name: String? = null
-    printAString(name)
+    var name: String? = null
+    printAString(name)  //name is null; and print out null
 
-    //this is a non-nullable variable, it won't accept null value.
-    val anotherName: String  = ""
+    //null safety operator
+    printAString(name?.toUpperCase())//null safe operation, print it as null
+
+    //nothing class; what is a nothing type, because there is not specific type being declared.
+    //nothing has no instance
+    val what = null  //this is not allowed in java
+    printAString(what)
+
+    //nonnull assertion, it throws KotlinNullPointerException
+    printAString(name!!.toUpperCase())
 }
 
 //kotlin may ignore void(unit)
