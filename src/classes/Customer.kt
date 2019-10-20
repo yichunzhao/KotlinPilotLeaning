@@ -2,32 +2,30 @@ package classes
 
 import java.util.*
 
-//Primary constructor
-//By default all attributes are public and offering public getters and setters
-//Private attributes must be explicit.
-data class Customer(var id: UUID, val name: String = "Yang", var address: String, var phoneNum: String) {
+//Primary constructor: without access modifier are public and offering public getters and setters
+//data class offers toString(), hashCode(), equalTo() etc as using Lombok @data
+data class Customer(
+    val id: UUID,
+    val name: String,
+    val address: String,
+    val phoneNum: String
+) {
 
     //Kotlin uses keyword to present a constructor, different from the Java using the name same as the class name.
+    //for the primary constructor, keyword can be ignored
     //2rd constructor, it still depends on the primary constructor; this is different from java overloading
     constructor(id: UUID, name: String) : this(id, name, "", "")
 
     //primary constructor init block
     init {
-        //do init. here
-        id = UUID.randomUUID()
-        println(id)
+        println("do init. here")
+        println("default id $id")
     }
 }
 
 fun main() {
-    val customer = Customer(id = UUID.randomUUID(), name = "mia")
+    val customer = Customer(UUID.randomUUID(), name = "Mia", address = "some where", phoneNum = "12345678")
     val customer1 = Customer(UUID.randomUUID(), name = "Jen")
-
-    customer.address = "oki address"
-    customer.phoneNum = "12345678910"
-
-    customer1.address = "no the street"
-    customer1.phoneNum = "5678910"
 
     println(customer.toString())
     println(customer1.toString())
