@@ -13,4 +13,11 @@ fun main() {
 
     println(muList)
     println("sorted: ${muList.sortedBy { u -> u.name }}")
+
+    //muList.find { it.name == "xxx" } ?: throw NoSuchElementException("not found")
+
+    val numbs = listOf<Int>(2, 3, 4, 4, 6, 7, 8, 8, 9, 9)
+    val filtered: List<Int> = numbs.filter { it >= 8 }!!
+    println(filtered)
+
 }
