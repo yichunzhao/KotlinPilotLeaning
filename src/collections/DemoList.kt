@@ -20,4 +20,14 @@ fun main() {
     val filtered: List<Int> = numbs.filter { it >= 8 }!!
     println(filtered)
 
+    //kotlin for loop doesn't have java for(int i; i<10; i++)
+    //but kotlin has for each only
+    for(i in 0..4){
+        //do some thing here
+        println(numbs[i])
+    }
+
+    //using range object to iterate each element
+    (0..4).forEach{ print(it)}
+
 }
