@@ -21,9 +21,8 @@ data class KotlinPerson(
 
     companion object {
         fun getAge(dateOfBirth: LocalDate?): Int {
-            if (dateOfBirth == null) return -1
-
-            return LocalDate.now().year - dateOfBirth.year
+            //kotlin ternary ref. to Java
+            return if (dateOfBirth != null) LocalDate.now().year - dateOfBirth.year else -1
         }
     }
 
