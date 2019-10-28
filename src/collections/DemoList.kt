@@ -21,13 +21,23 @@ fun main() {
     println(filtered)
 
     //kotlin for loop doesn't have java for(int i; i<10; i++)
-    //but kotlin has for each only
-    for(i in 0..4){
+    //but kotlin has for each
+    for (i in 0..4) {
         //do some thing here
         println(numbs[i])
     }
 
     //using range object to iterate each element
-    (0..4).forEach{ print(it)}
+    (0..4).forEach { print(it) }
+    println()
+
+    (0 until 9).forEach { print(it) }
+    println()
+
+    (9 downTo 0).forEach { print(it) }
+    println()
+
+    (0 until 8 step 2).forEach { print(it) }
+    println()
 
 }
