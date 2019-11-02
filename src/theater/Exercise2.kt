@@ -25,10 +25,12 @@ class Theater {
     init {
         for (r in 1..16) {
             for (n in 1..36) {
-                hiddenSeats.add(Seat(row = r, num = n, description = "", price = getPrice(r, n)))
+                hiddenSeats.add(Seat(row = r, num = n, description = getDescription(r, n), price = getPrice(r, n)))
             }
         }
     }
+
+    val seats = hiddenSeats.toList()
 
     private fun getPrice(row: Int, numb: Int): BigDecimal {
         if (row > 16 || numb > 36 || row <= 0 || numb <= 0) throw IllegalAccessException("row or numb is not right")
@@ -52,7 +54,17 @@ class Theater {
         return BigDecimal(10.0)
     }
 
-    val seats = hiddenSeats.toList()
+    private fun getDescription(row: Int, numb: Int): String {
+        //when in kotlin can replace the if-elseif-else
+        return when {
+            row == 15 -> "Back row"
+            row == 14 -> "Cheaper seat"
+            row in 1..13 && numb <= 3 && numb >= 34 -> "Restricted View"
+            row in 1..2 && numb in 3..34 -> "Best view"
+            else -> "Standard seat"
+        }
+
+    }
 
 }
 
