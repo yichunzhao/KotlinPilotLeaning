@@ -33,7 +33,7 @@ data class Customer(
     }
 
     fun getCustomerUpperCaseName(): String {
-        return name.toUpperCase()
+        return name.toCapitalSentence()
     }
 
     //equal to public static method
