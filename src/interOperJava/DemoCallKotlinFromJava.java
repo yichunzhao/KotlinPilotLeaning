@@ -9,7 +9,9 @@ public class DemoCallKotlinFromJava {
     public static void main(String[] args) {
         //using kotlin class from java
         Customer c = new Customer(UUID.randomUUID(), "yz");
-
         System.out.println(c.getName());
+
+        //calling kotlin static method from java.
+        System.out.println(Customer.getInstance());
     }
 }

@@ -37,7 +37,9 @@ data class Customer(
     }
 
     //equal to public static method
+
     companion object {
+        @JvmStatic
         fun getInstance(): Customer {
             return Customer(UUID.randomUUID(), name = "XXX", address = "some where", phoneNum = "12345678", age = 34)
         }
