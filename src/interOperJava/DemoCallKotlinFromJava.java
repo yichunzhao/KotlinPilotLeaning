@@ -11,6 +11,5 @@ public class DemoCallKotlinFromJava {
         Customer c = new Customer(UUID.randomUUID(), "yz");
 
         System.out.println(c.getName());
-
     }
 }
